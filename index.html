@@ -4,37 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre Mi</title>
+  <link href="./output.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Encabezado principal -->
-  <header>
-    <h1>Sobre Mí</h1>
-    <h2>Bienvenido a mi página personal</h2>
+  <header class="container mx-auto">
+    <nav>
+      <ul class="flex justify-center gap-4">
+        <li class="">Works</li>
+        <li>Blog</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
   </header>
 
+  
   <main>
-    <section>
-      <p>Hola, mi nombre es Jhon Alexander Bermudez Crawford. Soy un entusiasta del desarrollo web, y me encanta aprender nuevas tecnologías. Esta página fue creada como parte de una actividad para mostrar un poco sobre mí.</p>
+    <section class="container mx-auto py-12 md:py-20">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-8 md:mb-0 space-y-4">
+          <h1 class="text-5xl font-bold">Hola, soy Jhon, <br> Desarrollador Frontend</h1>
+          <p>met minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
+            enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+          <button class="bg-red-400 px-4 py-2 text-white font-semibold hover:bg-red-500 cursor-pointer">Descargar Curriculum</button>
+        </div>
+        <div class="md:w-1/3">
+          <div class="w-48 h-48 md:w-64 mx-auto">
+            <img class="rounded-full bg-blue-50 object-cover" src="/assets/photoperfil.jpg" alt="Foto de Jhon Bermudez" width={250}
+            height={250}>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Mi Hoja de Vida</h2>
-      <p>Soy estudiante de Ingeniería de Sistemas. Me gusta el diseño web, la programación y aprender nuevas herramientas digitales. También disfruto compartir mis conocimientos con los demás.</p>
+    <section class="mx-auto bg-cyan-100/70">
+      <div class="container mx-auto">
+        <div class="flex justify-between py-3">
+          <h1 class="text-xl">Recent posts</h1>
+          <a class="text-cyan-300" href="">Viaw all</a>
+        </div>
+        <div>
+          <div>
+
+          </div>
+        </div>
+        <h2>Mi Hoja de Vida</h2>
+        <p>Soy estudiante de Ingeniería de Sistemas. Me gusta el diseño web, la programación y aprender nuevas herramientas digitales. También disfruto compartir mis conocimientos con los demás.</p>
+      </div>
     </section>
 
-    <section>
-      <h2>Mi Foto</h2>
-      <img src="/assets/JhonBermudez.jpg" alt="Foto de Jhon Bermudez" width="200">
-      
-      <h2>Redes Sociales</h2>
-      <ul>
-        <li><a href="https://www.instagram.com/jhonbc__/" target="_blank">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/in/jhon-bermudez-57492131b/" target="_blank">LinkedIn</a></li>
-      </ul>
-    </section>
-
-    <section>
+    <section class="container mx-auto">
       <h2>Mis Pasatiempos</h2>
       <ul>
         <li>Escuchar música</li>
@@ -50,60 +69,43 @@
       </ol>
     </section>
 
-    <section>
-      <h2>Mi Horario Semanal</h2>
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Día</th>
-            <th>Actividad</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Lunes</td>
-            <td>Estudiar para el examen</td>
-          </tr>
-          <tr>
-            <td>Martes</td>
-            <td>Hacer oficio</td>
-          </tr>
-          <tr>
-            <td>Miércoles</td>
-            <td>Actualizar mi portafolio</td>
-          </tr>
-          <tr>
-            <td>Jueves</td>
-            <td>Estudiar para el examen</td>
-          </tr>
-          <tr>
-            <td>Viernes</td>
-            <td>Hacer oficio</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
+    <section class="container mx-auto">
       <h2>Contáctame</h2>
-      <form>
+      <form id="registroForm" class="">
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre"><br><br>
 
-        <label for="motivo">¿Por qué deseas contactarme?</label><br>
-        <input type="text" id="motivo" name="motivo"><br><br>
+        <label for="motivo">Fecha</label><br>
+        <input type="date" id="fecha" name="Fecha"><br><br>
 
         <label for="correo">Correo electrónico:</label><br>
         <input type="email" id="correo" name="correo"><br><br>
+
+        <label for="correo">Celular</label><br>
+        <input type="tel" id="celular" name="Celular"><br><br>
+
+        <label for="mensaje">Mensaje</label><br>
+        <textarea name="correo" id="mensaje" placeholder="Mensaje"></textarea><br><br>
+
+          <select name="pais">
+            <option value="">Selecciona un pais</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Mexico">Mexico</option>
+          </select>
 
         <button type="submit">Enviar</button>
       </form>
     </section>
   </main>
 
-  <footer>
+  <footer class="container mx-auto">
+    <ul>
+      <li><a href="https://www.instagram.com/jhonbc__/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/in/jhon-bermudez-57492131b/" target="_blank">LinkedIn</a></li>
+    </ul>
     <p>&copy; 2025 Jhon Bermudez. Todos los derechos reservados.</p>
   </footer>
-
 </body>
+<script src="./formulario.js"></script>
+
 </html>
